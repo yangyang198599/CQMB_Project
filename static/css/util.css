@@ -136,6 +136,21 @@ a:focus, a:hover {
 	background-size: 2rem 2rem;
 }
 
+.menuSSH {
+	background: url("../images/ssh.svg") no-repeat 1.5rem center;
+	background-size: 2rem 2rem;
+}
+
+.menuResult {
+	background: url("../images/result.svg") no-repeat 1.5rem center;
+	background-size: 2rem 2rem;
+}
+
+.menuLog {
+	background: url("../images/log.svg") no-repeat 1.5rem center;
+	background-size: 2rem 2rem;
+}
+
 .fileMgmt {
 	background: url("../images/file.svg") no-repeat 1.5rem center;
 	background-size: 2rem 2rem;
@@ -630,15 +645,47 @@ p.details-result {
 
 /*............*/
 /*-面包标题-*/
-.breadcrumb-isolation {
-    padding-left: 2.5rem;
-    background: url(../images/isolation-gray.svg) no-repeat left center;
-    background-size: 2rem;
+.breadcrumb-home {
+	padding-left: 2.5rem;
+	background: url("/static/images/home-gray.svg") no-repeat left center;
+	background-size: 2rem; 
 }
 .breadcrumb-host {
 	padding-left: 2.5rem;
-	background: url("../images/host-gray.svg") no-repeat left center;
+	background: url("/static/images/host-gray.svg") no-repeat left center;
 	background-size: 2rem; 
+}
+.breadcrumb-task {
+	padding-left: 2.5rem;
+	background: url("/static/images/task-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+.breadcrumb-file {
+	padding-left: 2.5rem;
+	background: url("/static/images/file-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+.breadcrumb-ssh {
+	padding-left: 2.5rem;
+	background: url("/static/images/ssh-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+
+.breadcrumb-result {
+	padding-left: 2.5rem;
+	background: url("/static/images/result-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+
+.breadcrumb-log {
+	padding-left: 2.5rem;
+	background: url("/static/images/log-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+.breadcrumb-isolation {
+    padding-left: 2.5rem;
+    background: url("/static/images/isolation-gray.svg") no-repeat left center;
+    background-size: 2rem;
 }
 
 /*--*/
