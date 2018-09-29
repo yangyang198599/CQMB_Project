@@ -34,7 +34,29 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cqen/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="281" column="39" lean-forward="true" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="635">
+              <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,7 +110,6 @@
         <option value="/usr/local/lib/python3.6/dist-packages/django_celery_results/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/cqen/batchtaskview.py" />
         <option value="$PROJECT_DIR$/static/css/file.css" />
-        <option value="$PROJECT_DIR$/cqen/views.py" />
         <option value="$PROJECT_DIR$/cqen/urls.py" />
         <option value="$PROJECT_DIR$/templates/addtask.html" />
         <option value="$PROJECT_DIR$/templates/23g.html" />
@@ -112,6 +133,7 @@
         <option value="$PROJECT_DIR$/static/css/site.css" />
         <option value="$PROJECT_DIR$/templates/isolation.html" />
         <option value="$PROJECT_DIR$/templates/Peer.html" />
+        <option value="$PROJECT_DIR$/cqen/views.py" />
       </list>
     </option>
   </component>
@@ -147,29 +169,7 @@
             <path>
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
@@ -374,9 +374,9 @@
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.45657277" />
-      <window_info anchor="bottom" id="Version Control" order="2" visible="true" weight="0.6596244" />
+      <window_info anchor="bottom" id="Version Control" order="2" visible="true" weight="0.1842723" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.3274648" />
-      <window_info active="true" anchor="bottom" x="388" y="203" width="1341" height="539" id="Terminal" order="4" type="FLOATING" visible="true" weight="0.6799531" />
+      <window_info active="true" anchor="bottom" x="323" y="204" width="1341" height="539" id="Terminal" order="4" type="FLOATING" visible="true" weight="0.6799531" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3258786" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -486,13 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -570,16 +563,6 @@
     <entry file="file://$PROJECT_DIR$/cqen/warining_device.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="284" column="23" lean-forward="true" selection-start-line="284" selection-start-column="23" selection-end-line="284" selection-end-column="23" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -774,6 +757,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="804" column="67" lean-forward="true" selection-start-line="804" selection-start-column="67" selection-end-line="804" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="281" column="39" lean-forward="true" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
         </state>
       </provider>
     </entry>
