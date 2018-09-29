@@ -84,7 +84,7 @@ def ssh_task(request):
                 # time.sleep(0.2)
                 res = stdout.read()
                 print(res)
-                clients.send(res)
+                print(clients.send(res))
                 ssh.close()
                 sshlog(request, dd[0])
             except Exception as e:
