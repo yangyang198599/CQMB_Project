@@ -291,4 +291,4 @@ def Peer(request):
     return render(request, "Peer.html")
 
 def  switch23g(request):
-    return render(request, "23g.html.html")
+    return render(request, "23g.html")
