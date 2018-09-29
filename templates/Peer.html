@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load staticfiles  %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,17 +61,17 @@
           <li class="sidebar-dropdown menuLog">
             <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
           </li>
-          <li class="sidebar-dropdown isolation active">
+         <li class="sidebar-dropdown isolation">
             <a href="#">隔离管理<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level collapse show">
+            <ul class="nav nav-second-level">
               <li>
-                <a href="isolation.html">设备隔离</a>
+                <a href="{% url 'cqen:isolation' %}">设备隔离</a>
               </li>
               <li>
-                <a href="Peer.html" class="current">对端AS隔离</a>
+                <a href="{% url 'cqen:Peer' %}">对端AS隔离</a>
               </li>
               <li>
-                <a href="23g.html">切换2G/3G</a>
+                <a href="{% url 'cqen:switch23g' %}">切换2G/3G</a>
               </li>
             </ul>
             <!-- /.nav-second-level -->
@@ -809,7 +809,7 @@
             </div> 
           </article>
 
-          <article id="item-10" class="menu__item"><div class="table-lists pic-box ">  <img src="../images/iload (2).jpg"></div></article>
+          <article id="item-10" class="menu__item"><div class="table-lists pic-box ">  <img src={% static '/images/iload_2.jpg' %}></div></article>
 
         </section>
       </div>

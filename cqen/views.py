@@ -280,3 +280,15 @@ def mkdir(request):
         else:
             return render(request, "file.html", error)
     return render(request, "file.html")
+
+
+def isolation(request):
+    return  render(request,"isolation.html")
+
+
+
+def Peer(request):
+    return render(request, "Peer.html")
+
+def  switch23g(request):
+    return render(request, "23g.html.html")

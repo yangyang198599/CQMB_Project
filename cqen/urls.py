@@ -24,6 +24,10 @@ urlpatterns = [
     path('moretask/', views.moretask, name='moretask'),
     path('getHostInfo/', views.getHostInfo,name='getHostInfo'),
     path('getext/', views.getext, name='getext'),
+    path('isolation/', views.isolation, name='isolation'),
+    path('Peer/', views.Peer, name='Peer'),
+    path('switch23g/', views.switch23g, name='switch23g'),
+
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
 ]
