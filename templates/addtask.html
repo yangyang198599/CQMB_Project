@@ -19,7 +19,6 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/util.css">
-    <link rel="stylesheet" href="/static/css/hostList.css">
     <script type="text/javascript" src="/static/layer/layer.js"></script>
 </head>
 
@@ -36,13 +35,13 @@
           <li class="sidebar-dropdown menuHome">
             <a href="{% url 'cqen:index' %}">首页</a>
           </li>
-          <li class="sidebar-dropdown menuHost active">
+          <li class="sidebar-dropdown menuHost">
             <a href="{% url 'cqen:hostlist' %}">主机列表</a>
           </li>
           <li class="sidebar-dropdown menuSSH">
             <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
           </li>
-          <li class="sidebar-dropdown menuTask">
+          <li class="sidebar-dropdown menuTask active">
             <a href="{% url 'cqen:moretask' %}">批量任务</a>
           </li>
           <li class="sidebar-dropdown menuResult">
@@ -77,7 +76,7 @@
     <div class="main">
         <div class="breadcrumbNav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active breadcrumb-host"><a href="hostlist.html">任务列表</a></li>
+                <li class="breadcrumb-item active breadcrumb-task"><a href="{% url 'cqen:moretask' %}">批量任务</a></li>
                 <li class="breadcrumb-item">添加</li>
             </ol>
         </div>

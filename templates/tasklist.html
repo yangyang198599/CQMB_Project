@@ -6,44 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>重庆移动核心网管理系统</title>
-    <script src="/static/js/jquery-1.8.2.min.js"></script>
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/js/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/js/sb-admin-2.js"></script>
+    <script src="/static/js/util.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/sb-admin-2.css" >
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/util.css">
-    <link rel="stylesheet" href="/static/css/hostList.css">
 
 </head>
 
 <body>
 <div class="container-fluid container-box">
-    <!-- 侧边栏 -->
-    <div class="sidebar">
-        <div class="title">
-            <p>重庆移动<br>核心网管理系统</p>
-        </div>
-        <ul class="menu">
-            <li class="menuHome ">
-                <a href="{% url 'cqen:index' %}">首页</a>
-            </li>
-            <li class="menuHost">
-                <a href="{% url 'cqen:hostlist' %}">主机列表</a>
-            </li>
-            <li class="menuSSH">
-                <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
-            </li>
-            <li class="menuTask current">
-                <a href="{% url 'cqen:moretask' %}">批量任务</a>
-            </li>
-            <li class="menuResult">
-                <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
-            </li>
-            <li class="fileMgmt">
-                <a href={% url 'cqen:filemgmt' %}>文件管理</a>
-            </li>
-            <li class="menuLog">
-                <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
-            </li>
+    <!-- Navigation -->
+    <!-- /.navbar-header -->
+    <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav navbar-collapse">
+      <div class="sidebar-brand">
+          <a href="#">重庆移动<br>核心网管理系统</a>
+      </div>
+        <ul class="nav sidebar-menu" id="side-menu">
+          <li class="sidebar-dropdown menuHome">
+            <a href="{% url 'cqen:index' %}">首页</a>
+          </li>
+          <li class="sidebar-dropdown menuHost">
+            <a href="{% url 'cqen:hostlist' %}">主机列表</a>
+          </li>
+          <li class="sidebar-dropdown menuSSH">
+            <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
+          </li>
+          <li class="sidebar-dropdown menuTask active">
+            <a href="{% url 'cqen:moretask' %}">批量任务</a>
+          </li>
+          <li class="sidebar-dropdown menuResult">
+            <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
+          </li>
+          <li class="sidebar-dropdown fileMgmt">
+            <a href="{% url 'cqen:filemgmt' %}">文件管理</a>
+          </li>
+          <li class="sidebar-dropdown menuLog">
+            <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
+          </li>
+          <li class="sidebar-dropdown isolation">
+            <a href="#">隔离管理<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              <li>
+                <a href="isolation.html">设备隔离</a>
+              </li>
+              <li>
+                <a href="Peer.html">对端AS隔离</a>
+              </li>
+              <li>
+                <a href="23g.html">切换2G/3G</a>
+              </li>
+            </ul>
+            <!-- /.nav-second-level -->
+          </li>
         </ul>
+      </div>
+      <!-- /.sidebar-collapse -->
     </div>
+
     <script type="text/javascript">
 
         function check(onlyone) {
@@ -72,7 +101,7 @@
         <div class="breadcrumbNav">
             <ol class="breadcrumb">
 
-                <li class="breadcrumb-item active breadcrumb-host">任务列表</li>
+                <li class="breadcrumb-item active breadcrumb-task">批量任务</li>
             </ol>
         </div>
 
@@ -179,10 +208,7 @@
     <p>重庆移动核心网管理系统 ©2016-2018</p>
 </footer>
 <div>
-
-    <script src="/static/js/jquery-1.8.2.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/util.js"></script>
+    
 </div>
 </body>
 </html>
