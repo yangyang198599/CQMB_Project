@@ -72,7 +72,7 @@ def ssh_task(request):
         for client in clients:
             strs = str(client, encoding='utf-8')
             dd = strs.split('|', strs.__len__())
-            print(dd[0])
+            print(strs)
 
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -83,6 +83,7 @@ def ssh_task(request):
                 stdin, stdout, stderr = ssh.exec_command(dd[0])
                 # time.sleep(0.2)
                 res = stdout.read()
+                print(res)
                 clients.send(res)
                 ssh.close()
                 sshlog(request, dd[0])

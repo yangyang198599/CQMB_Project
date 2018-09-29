@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb0d067-2b38-46de-ac53-5819f3d7fc75" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/cqen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssh_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssh_task.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,11 +50,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cqen/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="397">
+              <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ssh_task.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
             </state>
           </provider>
         </entry>
@@ -68,11 +78,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cqen/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
@@ -195,7 +200,6 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/modifyhost.html" />
         <option value="$PROJECT_DIR$/templates/operetionlog.html" />
-        <option value="$PROJECT_DIR$/templates/ssh_task.html" />
         <option value="$PROJECT_DIR$/templates/sub_file.html" />
         <option value="$PROJECT_DIR$/templates/taskhistory.html" />
         <option value="$PROJECT_DIR$/templates/tasklist.html" />
@@ -204,6 +208,7 @@
         <option value="$PROJECT_DIR$/templates/isolation.html" />
         <option value="$PROJECT_DIR$/templates/Peer.html" />
         <option value="$PROJECT_DIR$/cqen/models.py" />
+        <option value="$PROJECT_DIR$/templates/ssh_task.html" />
         <option value="$PROJECT_DIR$/cqen/views.py" />
       </list>
     </option>
@@ -217,7 +222,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="395" />
     <option name="y" value="227" />
     <option name="width" value="1221" />
@@ -257,6 +262,11 @@
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
@@ -455,16 +465,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1006" extended-state="7" />
+    <frame x="0" y="25" width="1920" height="1006" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.26291078" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.6785714" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.33920187" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.3262987" />
       <window_info anchor="bottom" x="323" y="204" width="1341" height="539" id="Terminal" order="4" type="FLOATING" weight="0.6799531" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17678382" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22470714" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="1" />
@@ -726,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sub_file.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -878,10 +882,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cqen/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="397">
+          <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
