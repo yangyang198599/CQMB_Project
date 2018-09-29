@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>重庆移动核心网管理系统</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/util.css">
+    <link rel="stylesheet" href="/static/css/hostList.css">
+
+</head>
+
+<body>
+<div class="container-fluid container-box">
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <div class="title">
+            <p>重庆移动<br>核心网管理系统</p>
+        </div>
+        <ul class="menu">
+            <li class="menuHome ">
+                <a href="{% url 'cqen:index' %}">首页</a>
+            </li>
+            <li class="menuHost">
+                <a href="{% url 'cqen:hostlist' %}">主机列表</a>
+            </li>
+            <li class="menuSSH">
+                <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
+            </li>
+            <li class="menuTask">
+                <a href="{% url 'cqen:moretask' %}">批量任务</a>
+            </li>
+            <li class="menuResult">
+                <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
+            </li>
+            <li class="fileMgmt">
+                <a href={% url 'cqen:filemgmt' %}>文件管理</a>
+            </li>
+            <li class="menuLog current">
+                <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="breadcrumbNav">
+            <ol class="breadcrumb">
+                <!--
+               <li class="breadcrumb-item"><a href="../welcome.do">首页</a></li>
+             -->
+                <li class="breadcrumb-item active breadcrumb-log">系统日志</li>
+            </ol>
+        </div>
+
+           <div class="general-list">
+        <div class="table-lists">
+            <div class="fixed-table-container">
+                <table id="bootstrap-table" class="table table-hover ">
+                    <thead>
+
+
+                    <th data-field="device" data-sortable="true">时间</th>
+                    <th data-field="username" data-sortable="true">用户名</th>
+                    <th data-field="ip" data-sortable="true">访问地址</th>
+                    <th data-field="port" data-sortable="true">事件</th>
+                    <th data-field="password" data-sortable="true">返回值</th>
+                    </thead>
+
+                    {% for contact in loginfo.object_list %}
+
+                        <tbody>
+
+                        <tr>
+
+                            <td>{{ contact.time }}</td>
+                            <td>{{ contact.username }}</td>
+                            <td>{{ contact.url }}</td>
+                            <td>{{ contact.type }}</td>
+                            <td>{{ contact.value }}</td>
+
+                        </tr>
+
+
+                        </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="nodata" style="display: none;">暂无数据</div>
+        </div>
+
+        <!-- 分页 -->
+        <div class="pg-box">
+            <div class="pageMain">
+                <p>页数：<span>{{ loginfo.number }} /{{ loginfo.paginator.num_pages }}</span></p>
+                <p>总数：<span>{{ loginfo.paginator.num_pages }}</span></p>
+            </div>
+            <div class="tablePaginate">
+                <ul class="pagination">
+
+                    <li class="paginate-outline paginate-disabled"><a style="text-decoration:none;color:#5a6268;"
+                                                                      href="?page=1">首页</a></li>
+                    {% if loginfo.has_previous %}
+                        <li class="paginate-outline paginate-disabled"><a
+                                style="text-decoration:none;color:#5a6268;"
+                                href="?page={{ loginfo.previous_page_number }}">上一页</a></li>
+                    {% endif %}
+                    {% for foo in loginfo.paginator.page_range %}
+                        {% if loginfo.number == foo %}
+                            <li class="active"><a style="text-decoration:none;color:#5a6268;"
+                                                  href="?page={{ foo }}"></a>{{ foo }}</li>
+                        {% else %}
+                            <li><a style="text-decoration:none;color:#5a6268;" href="?page={{ foo }}">{{ foo }}</a>
+                            </li>
+
+
+                        {% endif %}
+                    {% endfor %}
+
+
+
+
+                    {% if loginfo.has_next %}
+                        <li class="paginate-outline"><a style="text-decoration:none;color:#5a6268;"
+                                                        href="?page={{ loginfo.next_page_number }}">下一页</a></li>
+                    {% endif %}
+                    <li class="paginate-outline"><a style="text-decoration:none;color:#5a6268;"
+                                                    href="?page={{ loginfo.paginator.num_pages }}"> 尾页</a></li>
+
+                </ul>
+            </div>
+        </div><!-- 分页 -->
+
+    </div>
+    </div>
+</div>
+
+<footer>
+    <p>重庆移动核心网管理系统 ©2016-2018</p>
+</footer>
+<div>
+
+    <script src="/static/js/jquery-1.8.2.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/util.js"></script>
+</body>
+</html>

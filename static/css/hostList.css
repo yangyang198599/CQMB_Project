@@ -1,0 +1,10 @@
+.breadcrumb-host {
+	padding-left: 2.5rem;
+	background: url("../images/host-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+
+.general-list {
+	background-color: #fff;
+	padding: 2rem;
+}

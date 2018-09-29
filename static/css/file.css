@@ -1,0 +1,48 @@
+.breadcrumb-file {
+	padding-left: 2.5rem;
+	background: url("../images/file-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+
+.folder-list {
+	background-color: #fff;
+	padding: 2rem;
+}
+
+.table1 td {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.table1 .folderImg {
+	padding-left: 7rem;
+	background: url("../images/folder.svg") no-repeat left center;
+	background-size: 6rem;
+}
+
+.table1 .folderImg a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #323232;
+}
+
+.table1 .folderImg a:hover {
+	color: #14a31e;
+}
+
+.table2 td {
+	padding-top: 1.4rem;
+	padding-bottom: 1.4rem;
+}
+
+.table2 .subfname {
+	padding-left: 4rem;
+	background: url("../images/fileicon.svg") no-repeat left center;
+	background-size: 3rem;
+	text-decoration: none;
+	color: #323232;
+}
+
+.modal-body .form-group {
+	margin-bottom: 0;
+}

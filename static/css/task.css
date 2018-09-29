@@ -1,0 +1,54 @@
+.breadcrumb-task {
+	padding-left: 2.5rem;
+	background: url("../images/task-gray.svg") no-repeat left center;
+	background-size: 2rem; 
+}
+
+.task-box {
+	background-color: #fff;
+}
+
+.task-content {
+	padding: 4rem 2rem;
+}
+
+.condition-group {
+	overflow: hidden;
+}
+
+.condition-group .form-group, .perform .form-group {
+	float: left;
+}
+
+ .perform {
+	margin-top: 3rem;
+}
+
+.condition .btn, .perform .btn {
+	margin-left: 2rem;
+}
+
+.result {
+	margin-top: 2rem;
+}
+
+.result textarea {
+	width: calc(100% - 16rem);
+	border-color: #ccc;
+}
+
+.result label {
+	vertical-align: top;
+}
+
+.link-tips {
+	display: none;
+}
+
+.tips-success {
+	color: #14a31e;
+}
+
+.tips-failure {
+	color: #ff0000;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>重庆移动核心网管理系统</title>
+    <script src="/static/js/jqery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/util.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/util.css">
+    <link rel="stylesheet" href="/static/css/task.css">
+</head>
+
+<body>
+<div class="container-fluid container-box">
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <div class="title">
+            <p>重庆移动<br>核心网管理系统</p>
+        </div>
+        <ul class="menu">
+            <li class="menuHome">
+                <a href="{% url 'cqen:index' %}">首页</a>
+            </li>
+            <li class="menuHost">
+                <a href="{% url 'cqen:hostlist' %}">主机列表</a>
+            </li>
+            <li class="menuSSH current">
+                <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
+            </li>
+            <li class="menuTask">
+                <a href="{% url 'cqen:moretask' %}">批量任务</a>
+            </li>
+            <li class="menuResult">
+                <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
+            </li>
+            <li class="menuLog">
+                <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
+            </li>
+            <li class="fileMgmt">
+                <a href="#">文件管理</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="breadcrumbNav">
+            <ol class="breadcrumb">
+                <!--
+               <li class="breadcrumb-item"><a href="../welcome.do">首页</a></li>
+             -->
+                <li class="breadcrumb-item active breadcrumb-ssh">任务</li>
+            </ol>
+        </div>
+
+        <div class="task-box">
+            <div class="box-head">
+                <p>添加任务</p>
+            </div>
+            {% csrf_token %}
+            <div class="task-content">
+                <div class="condition">
+                    <div class="condition-group">
+                        <div class="form-group">
+                            <label for="inputdevice">设备名</label>
+                            <select id="hostname">
+                                <option value="">---请选择---</option>
+                            </select>
+
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="hidden" class="form-control" required="required" readonly="readonly" id="inputip"
+                                   name="inputip">
+                        </div>
+                        <div class="form-group">
+
+                            <input type="hidden" class="form-control" readonly="readonly" id="inputport"
+                                   name="inputport">
+                        </div>
+                        <div class="form-group">
+
+                            <input type="hidden" class="form-control" readonly="readonly" id="inputuser"
+                                   name="inputuser">
+                        </div>
+                        <div class="form-group">
+
+                            <input type="hidden" class="form-control" readonly="readonly" id="inputpassword"
+                                   name="inputpassword">
+
+                        </div>
+                        <button type="button" class="btn btn-primary" id="connect_websocket">连接</button>
+                        <span id="sp" class="text-success" style="display:none">连接成功</span>
+                    </div>
+
+                </div>
+
+                <div class="result">
+                    <div class="form-group">
+                        <label></label>
+                        <div>
+                           <textarea id="messagecontainer" style="height: 300px;margin-left: 11.3rem;margin-top: -3rem;padding: 2rem;">非交互模式shell</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perform">
+                    <div class="form-group">
+                        <label for="inputcommand">命令</label>
+                        <input type="text" class="form-control" id="inputcommand">
+                    </div>
+                    <button type="button" id="send_message" class="btn btn-disabled disabled">执行</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        type = "text/javascript" >
+            $(function () {
+
+
+                $('#connect_websocket').click(function () {
+                    if (window.s) {
+                        window.s.close()
+
+
+                    }
+
+                    var socket = new WebSocket("ws://" + "192.168.0.146" + "/ssh_task/");
+                    socket.onopen = function () {
+                        if ($('#inputpassword').val() == "") {
+                            alert($('#inputpassword').val());
+                            console.log('error');
+
+                        }
+                        $('#send_message').removeClass("btn-disabled disabled");
+                        $('#send_message').addClass("btn-success");
+                        console.log('WebSocket open');
+                    };
+                    socket.onmessage = function (e) {
+                        console.log(e.data);
+                         $('#messagecontainer').focus();
+                        $('#messagecontainer').val(e.data);
+
+                    };
+
+
+                    if (socket.readyState == WebSocket.OPEN)
+                        socket.onopen();
+                    window.s = socket;
+                });
+                $('#send_message').click(function () {
+
+                    if (!window.s) {
+                        alert("websocket未连接.");
+                    } else {
+                        window.s.send($('#inputcommand').val() + '|' + $('#inputip').val() + '|' + $('#inputport').val() + '|' + $('#inputuser').val() + '|' + $('#inputpassword').val());
+
+                    }
+                });
+                $('#close_websocket').click(function () {
+                    if (window.s) {
+                        window.s.close();
+                        console.log('websocket已关闭');
+                    }
+                });
+
+            });
+
+
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+
+            $.get('/getHostInfo', function (data) {
+                for (var i = 0, len = data.hostinfo.length; i < len; i++) {
+                    $new = $("<option value=" + data.hostinfo[i][0] + ">" + data.hostinfo[i][1] + "</option>");
+
+                    $("#hostname").append($new);
+
+
+                }
+            });
+            $("#hostname").change(function () {
+
+                $("#inputip").val("");
+                $("#inputport").val("");
+                $("#inputuser").val("");
+                $("#inputpassword").val("");
+
+                $.ajax({
+                    url: '/getext',
+                    type: 'get',
+                    data: {"id": $(this).val()}
+                }).done(function (data) {
+                    for (var i = 0, len = data.textinfo.length; i < len; i++) {
+                        $("#inputip").val(data.textinfo[i][2]);
+                        $("#inputport").val(data.textinfo[i][3]);
+                        $("#inputuser").val(data.textinfo[i][4]);
+                        $("#inputpassword").val(data.textinfo[i][5]);
+                    }
+                });
+            });
+
+        })
+
+
+    </script>
+
+
+    <footer>
+        <p>重庆移动核心网管理系统 ©2016-2018</p>
+    </footer>
+
+</div>
+
+
+</body>
+</html>

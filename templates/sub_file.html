@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>重庆移动核心网管理系统</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/util.css">
+    <link rel="stylesheet" href="/static/css/file.css">
+</head>
+
+<body>
+{% csrf_token %}
+<div class="container-fluid container-box">
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <div class="title">
+            <p>重庆移动<br>核心网管理系统</p>
+        </div>
+        <ul class="menu">
+            <li class="menuHome ">
+                <a href="{% url 'cqen:index' %}">首页</a>
+            </li>
+            <li class="menuHost">
+                <a href="{% url 'cqen:hostlist' %}">主机列表</a>
+            </li>
+            <li class="menuSSH">
+                <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
+            </li>
+            <li class="menuTask">
+                <a href="{% url 'cqen:moretask' %}">批量任务</a>
+            </li>
+            <li class="menuResult">
+                <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
+            </li>
+            <li class="fileMgmt current">
+                <a href={% url 'cqen:filemgmt' %}>文件管理</a>
+            </li>
+            <li class="menuLog">
+                <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
+            </li>
+        </ul>
+    </div>
+      <script type="text/javascript">
+
+        function check(one) {
+            var length = $("input[name='ids']:checked").length;
+
+            if (one && length < 1) {
+                alert("请选择数据");
+                return false;
+
+            }
+
+            return true;
+
+        }
+
+        function checkmore(more) {
+            var length = $("input[name='ids']:checked").length;
+            if (more && length > 1) {
+                alert("只能选择一项");
+                return false;
+            }
+            return true;
+
+        }
+
+        function modfiyhost() {
+            if (checkmore(true)) {
+                $("form")[0].action = "";
+                $("form")[0].submit();
+
+            }
+
+        }
+
+
+        function btcall() {
+            if (check(true) && confirm("确定要删除吗?")) {
+                $("form")[0].action = "";
+                $("form")[0].submit();
+            }
+        }
+
+    </script>
+    <div class="main">
+        <div class="breadcrumbNav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active breadcrumb-file"><a href={% url 'cqen:filemgmt' %}>文件管理</a></li>
+                <li class="breadcrumb-item">YYD</li>
+            </ol>
+        </div>
+
+        <div class="folder-list">
+                  <input id="call" class="btn btn-danger" type="button" value="删除文件" onclick="btcall()">
+            <div class="table-lists">
+                <div class="fixed-table-container">
+                    <table id="bootstrap-table" class="table table2 table-hover">
+                        <thead>
+                        <th data-field="state" data-checkbox="true"><input type="checkbox" id="selectAll"></th>
+                        <th data-field="foldername" data-sortable="true">文件名</th>
+                        <th data-field="size" data-sortable="true">大小</th>
+                        <th data-field="time" data-sortable="true">新建时间</th>
+                        <th data-field="permission" data-sortable="true">权限</th>
+                        <th data-field="author" data-sortable="true">所有者</th>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td><input  name="ids" type="checkbox"></td>
+                            <td class="subfname"><a href="http://192.168.0.146/media/yangyang/20180910.log">20180910.log</a></td>
+                            <td>10.00 KB</td>
+                            <td>2018/09/05 15:04:35</td>
+                            <td>755</td>
+                            <td>root</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td class="subfname">二级文件名</td>
+                            <td>10.00 KB</td>
+                            <td>2018/09/05 15:04:35</td>
+                            <td>755</td>
+                            <td>root</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td class="subfname">二级文件名</td>
+                            <td>10.00 KB</td>
+                            <td>2018/09/05 15:04:35</td>
+                            <td>755</td>
+                            <td>root</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="nodata" style="display: none;">暂无数据</div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>重庆移动核心网管理系统 ©2016-2018</p>
+    </footer>
+
+
+        <script src="/static/js/jquery-1.8.2.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/util.js"></script>
+    </div>
+
+</body>
+
+</html>
