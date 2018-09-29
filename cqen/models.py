@@ -57,7 +57,7 @@ class Floder(models.Model):
     owner = models.ForeignKey('Nethost',to_field='m_hostname',on_delete=models.CASCADE)
     folderame = models.CharField(max_length=45, null=False, verbose_name='文件名')
     fpath = models.CharField(max_length=60, default='/home/voip/Projects/CQMB_Project/media/',unique=True )
-    modifytime = models.TimeField(default=timezone.now())
+    modifytime = models.TimeField(default=timezone.now)
     filesize = models.CharField(max_length=60, default=0)
 
 class Sysinfo(models.Model):
