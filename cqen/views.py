@@ -83,7 +83,6 @@ def ssh_task(request):
                 stdin, stdout, stderr = ssh.exec_command(dd[0])
                 # time.sleep(0.2)
                 res = stdout.read()
-                print(res)
                 clients.send(res)
                 ssh.close()
                 sshlog(request, dd[0])
@@ -242,7 +241,7 @@ def moretask(request):
         contacts = paginator.page(paginator.num_pages)
     return render(request, 'tasklist.html', {'tasklist': contacts})
 
-
+@login_required
 def filemgmt(request):
 
         contact_list = Floder.objects.all()
@@ -281,14 +280,14 @@ def mkdir(request):
             return render(request, "file.html", error)
     return render(request, "file.html")
 
-
+@login_required
 def isolation(request):
     return  render(request,"isolation.html")
 
 
-
+@login_required
 def Peer(request):
     return render(request, "Peer.html")
-
+@login_required
 def  switch23g(request):
     return render(request, "23g.html")
