@@ -44,14 +44,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cqen/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="575">
+              <caret line="295" column="20" selection-start-line="295" selection-start-column="20" selection-end-line="295" selection-end-column="20" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isolation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/isolation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -104,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cqen/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="405">
+              <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -174,7 +183,6 @@
         <option value="/usr/local/lib/python3.6/dist-packages/django_celery_results/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/cqen/batchtaskview.py" />
         <option value="$PROJECT_DIR$/static/css/file.css" />
-        <option value="$PROJECT_DIR$/cqen/urls.py" />
         <option value="$PROJECT_DIR$/templates/addtask.html" />
         <option value="$PROJECT_DIR$/templates/23g.html" />
         <option value="$PROJECT_DIR$/templates/23g_do.html" />
@@ -194,11 +202,12 @@
         <option value="$PROJECT_DIR$/templates/tasklist.html" />
         <option value="$PROJECT_DIR$/templates/telnet_task.html" />
         <option value="$PROJECT_DIR$/static/css/site.css" />
-        <option value="$PROJECT_DIR$/templates/isolation.html" />
         <option value="$PROJECT_DIR$/templates/Peer.html" />
         <option value="$PROJECT_DIR$/cqen/models.py" />
-        <option value="$PROJECT_DIR$/cqen/views.py" />
         <option value="$PROJECT_DIR$/templates/ssh_task.html" />
+        <option value="$PROJECT_DIR$/cqen/views.py" />
+        <option value="$PROJECT_DIR$/templates/isolation.html" />
+        <option value="$PROJECT_DIR$/cqen/urls.py" />
       </list>
     </option>
   </component>
@@ -455,7 +464,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1006" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
@@ -463,7 +471,7 @@
       <window_info anchor="bottom" id="Run" order="8" weight="0.26173708" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.33920187" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.3262987" />
-      <window_info anchor="bottom" x="323" y="204" width="1341" height="539" id="Terminal" order="4" type="FLOATING" weight="0.6799531" />
+      <window_info active="true" anchor="bottom" x="323" y="204" width="1341" height="539" id="Terminal" order="4" type="FLOATING" visible="true" weight="0.6799531" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22470714" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -471,7 +479,7 @@
       <window_info anchor="right" id="Database" order="0" weight="0.32955223" />
       <window_info anchor="right" id="SciView" order="2" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.3814554" />
+      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.18661971" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -766,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/isolation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2618">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Peer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -824,16 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cqen/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -880,10 +871,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cqen/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="575">
+          <caret line="295" column="20" selection-start-line="295" selection-start-column="20" selection-end-line="295" selection-end-column="20" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/isolation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
