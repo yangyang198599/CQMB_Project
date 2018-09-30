@@ -61,14 +61,14 @@
           <li class="sidebar-dropdown menuLog">
             <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
           </li>
-         <li class="sidebar-dropdown isolation">
+         <li class="sidebar-dropdown isolation active">
             <a href="#">隔离管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level collapse show">
               <li>
                 <a href="{% url 'cqen:isolation' %}">设备隔离</a>
               </li>
-              <li>
-                <a class="current" href="{% url 'cqen:Peer' %}">对端AS隔离</a>
+              <li class="current">
+                <a href="{% url 'cqen:Peer' %}">对端AS隔离</a>
               </li>
               <li>
                 <a href="{% url 'cqen:switch23g' %}">切换2G/3G</a>
