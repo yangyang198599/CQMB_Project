@@ -23,7 +23,7 @@ def start_ssh_job(cmd):
         res = stdout.read()
         basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         path = (os.path.join(basedir, 'media', i[5]))
-        print(path)
+        print(path+'/'+nowTime+'.log')
         file = open(path+'/'+nowTime+'.log', 'a')
         file.write(res.decode('utf-8', 'ignore'))
         file.flush()

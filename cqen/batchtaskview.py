@@ -23,7 +23,7 @@ def celery_call(request):
             res = []
             for i in host_info:
                 res.append([i.ip, i.port, i.username, i.passwd, i.taskcmd,i.hostname])
-                tid = tasks.start_ssh_job.delay(res)
+                tid = tasks.start_ssh_job(res)
 
                 # tid = tasks.start_ssh_job(res)
                 print(tid)
