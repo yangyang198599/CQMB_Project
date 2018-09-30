@@ -27,6 +27,7 @@ urlpatterns = [
     path('isolation/', views.isolation, name='isolation'),
     path('Peer/', views.Peer, name='Peer'),
     path('switch23g/', views.switch23g, name='switch23g'),
+    path('equipment_details/', views.equipment_details, name='equipment_details'),
 
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
