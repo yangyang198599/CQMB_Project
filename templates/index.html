@@ -119,7 +119,7 @@
                     {% for key,v in wlog.items %}
                         <ul>
 
-                            <li  id="show"  data-toggle="modal" data-target="#{{ key }}">
+                            <li id="show" data-toggle="modal" data-target="#{{ key }}">
                                 <div class="server">
                                     <p id="key">{{ key }}</p>
 
@@ -147,30 +147,35 @@
 
 
 
-    <!-- Modal -->
-    {% for k,v in wlog.items %}
-        <div  class="modal fade" id={{ k }} tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
+        <!-- Modal -->
+        {% for k,v in wlog.items %}
+             <form method="post" action="{% url 'cqen:waringchecked' %}">
+               {% csrf_token %}
+            <div class="modal fade" id={{ k }} tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
 
-
-
+                 aria-hidden="true">
+                <input type="hidden" name="check" value="{{ k }}">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
 
 
                             <pre>{{ v }}</pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button"  class="btn btn-primary" data-dismiss="modal">确定</button>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                            <input type="submit" id="btn" class="btn btn-warning" value="确认">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </form>
 
 
+        {% endfor %}
 
- {% endfor %}
+
 
     <footer>
         <p>重庆移动核心网管理系统 ©2016-2018</p>

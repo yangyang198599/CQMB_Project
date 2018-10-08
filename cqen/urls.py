@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf.urls import url
 from cqen import batchtaskview, log_file_download
-from cqen import views, operationlogs,warining_device
+from cqen import views, operationlogs, warining_device
 from CQMB_Project.settings import MEDIA_ROOT
 from django.views.static import serve
 
@@ -30,7 +30,7 @@ urlpatterns = [
     path('switch23g/', views.switch23g, name='switch23g'),
     path('equipment_details/', views.equipment_details, name='equipment_details'),
     path('warningdevice/', warining_device.warningdevice, name='warningdevice'),
-
+    path('waringchecked/', warining_device.waringchecked, name='waringchecked'),
 
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 

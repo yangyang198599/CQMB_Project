@@ -303,3 +303,7 @@ def switch23g(request):
 @login_required
 def equipment_details(request):
     return render(request, "equipment_details.html")
+
+
+
+

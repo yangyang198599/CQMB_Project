@@ -27,4 +27,13 @@ def warningdevice():
     return whost
 
 
+@login_required
+def waringchecked(request):
+     if request.method =='POST':
+         hostname=request.POST.get('check')
+         try:
+          TaskResult.objects.filter(host_name=hostname).update(ischecked=True)
+         except Exception as e:
+             print(e)
 
+     return redirect('cqen:index')
