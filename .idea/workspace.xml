@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb0d067-2b38-46de-ac53-5819f3d7fc75" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/batchtaskview.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/batchtaskview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/warining_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/warining_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/voip/20180930.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/yangyang/20180930.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/yangyang/20181008.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/yangyang/20181008.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssh_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssh_task.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +43,8 @@
       <file leaf-file-name="batchtaskview.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="353">
+              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -55,41 +52,31 @@
       <file leaf-file-name="tasklist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tasklist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1592">
+            <state relative-caret-position="-1235">
               <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operationlogs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cqen/operationlogs.py">
+      <file leaf-file-name="adduser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/adduser.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="addhost.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/addhost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cqen/views.py">
+      <file leaf-file-name="hostlist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/hostlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ssh_task.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3264">
-              <caret line="3" column="72" lean-forward="true" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+            <state relative-caret-position="-1598">
+              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -106,20 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskhistory.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/taskhistory.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2391">
-              <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="493">
+              <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -127,17 +105,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1094">
-              <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+            <state relative-caret-position="229">
+              <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cqen/tasks.py">
+      <file leaf-file-name="taskhistory.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/taskhistory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="221">
+              <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="as_details.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/as_details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6">
+              <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -161,6 +148,7 @@
       <find>iload</find>
       <find>iload (1).jpg</find>
       <find>iload (2).jpg</find>
+      <find>4rem</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,7 +166,6 @@
         <option value="$PROJECT_DIR$/cqen/telnet_task.py" />
         <option value="$PROJECT_DIR$/cqen/operationlogs.py" />
         <option value="$PROJECT_DIR$/CQMB_Project/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/cqen/log_file_download.py" />
         <option value="$PROJECT_DIR$/cqen/sysinfo.py" />
         <option value="$PROJECT_DIR$/cqen/warining_log.py" />
@@ -214,11 +201,12 @@
         <option value="$PROJECT_DIR$/cqen/tasks.py" />
         <option value="$PROJECT_DIR$/cqen/models.py" />
         <option value="$PROJECT_DIR$/cqen/urls.py" />
-        <option value="$PROJECT_DIR$/CQMB_Project/settings.py" />
         <option value="$PROJECT_DIR$/cqen/views.py" />
         <option value="$PROJECT_DIR$/templates/ssh_task.html" />
         <option value="$PROJECT_DIR$/cqen/batchtaskview.py" />
         <option value="$PROJECT_DIR$/cqen/warining_device.py" />
+        <option value="$PROJECT_DIR$/static/css/index.css" />
+        <option value="$PROJECT_DIR$/CQMB_Project/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
@@ -233,8 +221,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="212" />
-    <option name="y" value="88" />
+    <option name="x" value="93" />
+    <option name="y" value="156" />
     <option name="width" value="1356" />
     <option name="height" value="576" />
   </component>
@@ -266,6 +254,17 @@
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
               <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CQMB_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CQMB_Project" type="b2602c69:ProjectViewProjectNode" />
@@ -470,16 +469,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1006" extended-state="6" />
+    <frame x="1920" y="-2" width="1366" height="770" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="2" visible="true" weight="0.33920187" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.33920187" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.32629108" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.26056337" />
       <window_info anchor="bottom" x="236" y="299" width="1341" height="539" id="Terminal" order="4" type="FLOATING" weight="0.6799531" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.22790202" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.15332326" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="1" />
@@ -487,7 +487,7 @@
       <window_info anchor="right" id="SciView" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.22790202" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.17605634" />
+      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.077922076" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
@@ -576,7 +576,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cqen/sysinfo.py" />
     <entry file="file://$PROJECT_DIR$/templates/addtask.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -605,23 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/addhost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/adduser.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/as_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/as_do.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -640,13 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hostlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -810,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cqen/operationlogs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -827,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/taskhistory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2391">
-          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3264">
@@ -841,24 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tasklist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1592">
-          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cqen/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -872,6 +819,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cqen/warining_device.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -882,10 +843,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/as_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tasklist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1235">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adduser.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/addhost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hostlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1598">
+          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CQMB_Project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/taskhistory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1094">
-          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+        <state relative-caret-position="229">
+          <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
         </state>
       </provider>
     </entry>
