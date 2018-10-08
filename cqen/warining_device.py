@@ -1,3 +1,5 @@
+#coding=utf-8
+
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, logout, login
@@ -16,8 +18,9 @@ def warningdevice():
     key=[]
     values=[]
     for hinfo in log:
+
         key.append(hinfo.host_name)
-        values.append(hinfo.result)
+        values.append(str(hinfo.result).encode('utf-8').decode('unicode_escape'))
     whost=dict(zip(key,values))
 
     print(whost)
