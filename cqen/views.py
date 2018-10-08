@@ -4,14 +4,13 @@ from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models.aggregates import Count
-from cqen.models import Nethost, Tasks,Floder
+from cqen.models import Nethost, Tasks, Floder
 from cqen.operationlogs import operationlogs
+from cqen.warining_device import warningdevice
 from datetime import datetime
 from dwebsocket import accept_websocket
 import paramiko
 import os
-
-
 
 
 # 登陆
@@ -34,7 +33,9 @@ def login_to_index(request):
 # 首页
 def index(request):
     list = Nethost.objects.values('m_company').distinct().annotate(Count('id'))
-    return render(request, 'index.html', {'list': list})
+
+    wlog=warningdevice()
+    return render(request, 'index.html', {'list': list,'wlog':wlog})
 
 
 def logout_to_login(request):
@@ -122,7 +123,7 @@ def addtask(request):
 def addhost(request):
     sucess = {'sucess': '添加主机成功'}
     error = {'error': '添加主机失败'}
-    type=['添加主机','修改主机']
+    type = ['添加主机', '修改主机']
     if request.method == "POST":
         id = request.POST.get('id')
         m_hostname = request.POST.get('hostname')
@@ -134,18 +135,21 @@ def addhost(request):
         modif = request.POST.get('modfiy')
         if modif is None:
             try:
-                cnethost = Nethost.objects.create(m_hostname=m_hostname, m_ip=m_ip, m_port=m_port, m_username=m_username,
-                                                 m_passwd=m_passwd, m_company=m_company)
+                cnethost = Nethost.objects.create(m_hostname=m_hostname, m_ip=m_ip, m_port=m_port,
+                                                  m_username=m_username,
+                                                  m_passwd=m_passwd, m_company=m_company)
                 cnethost.save()
-                logrecode(request,type[0])
-                return  redirect('/hostlist')
-            except:
-                return   redirect('/hostlist')
+                logrecode(request, type[0])
+                return redirect('/hostlist',error)
+            except Exception as e:
+                print(e)
+                return redirect('/hostlist')
         else:
-            Nethost.objects.filter(id=id).update(m_hostname=m_hostname, m_ip=m_ip, m_port=m_port, m_username=m_username,m_passwd=m_passwd, m_company=m_company)
+            Nethost.objects.filter(id=id).update(m_hostname=m_hostname, m_ip=m_ip, m_port=m_port, m_username=m_username,
+                                                 m_passwd=m_passwd, m_company=m_company)
             logrecode(request, type[1])
             return redirect('/hostlist')
-    return render(request,"addhost.html")
+    return render(request, "addhost.html")
 
 
 @login_required
@@ -158,7 +162,7 @@ def deletehost(request):
                 nethost = Nethost.objects.filter(id=id).delete()
                 print(nethost[0])
                 if nethost[0] == 1:
-                    logrecode(request,'删除主机')
+                    logrecode(request, '删除主机')
                 else:
                     return JsonResponse(error)
             except Exception as e:
@@ -179,16 +183,16 @@ def modifyhost(request):
     return redirect('/hostlist')
 
 
-def logrecode(request,type):
+def logrecode(request, type):
     user = request.user.username
 
     cmd = request.get_full_path_info()
     print(cmd)
-    if type=='添加主机':
+    if type == '添加主机':
         operationlogs(sdate=datetime.now(), url=cmd, username=user, value='操作成功', type=type)
-    if type=='修改主机':
+    if type == '修改主机':
         operationlogs(sdate=datetime.now(), url=cmd, username=user, value='操作成功', type=type)
-    if type=='删除主机':
+    if type == '删除主机':
         operationlogs(sdate=datetime.now(), url=cmd, username=user, value='操作成功', type=type)
     return True
 
@@ -241,27 +245,27 @@ def moretask(request):
         contacts = paginator.page(paginator.num_pages)
     return render(request, 'tasklist.html', {'tasklist': contacts})
 
+
 @login_required
 def filemgmt(request):
+    contact_list = Floder.objects.all()
+    paginator = Paginator(contact_list, 5)
+    page = request.GET.get("page")
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
 
-        contact_list = Floder.objects.all()
-        paginator = Paginator(contact_list, 5)
-        page = request.GET.get("page")
-        try:
-           contacts = paginator.page(page)
-        except PageNotAnInteger:
+        contacts = paginator.page(1)
+    except EmptyPage:
 
-           contacts = paginator.page(1)
-        except EmptyPage:
-
-           contacts = paginator.page(paginator.num_pages)
-        return render(request, "file.html", {'floderlist': contacts})
+        contacts = paginator.page(paginator.num_pages)
+    return render(request, "file.html", {'floderlist': contacts})
 
 
 @login_required
 def sub_file(request):
+    return render(request, "sub_file.html")
 
-    return  render(request,"sub_file.html")
 
 @login_required
 def mkdir(request):
@@ -280,18 +284,22 @@ def mkdir(request):
             return render(request, "file.html", error)
     return render(request, "file.html")
 
+
 @login_required
 def isolation(request):
-    return  render(request,"isolation.html")
+    return render(request, "isolation.html")
 
 
 @login_required
 def Peer(request):
     return render(request, "Peer.html")
-@login_required
-def  switch23g(request):
-    return render(request, "23g.html")
-@login_required
 
+
+@login_required
+def switch23g(request):
+    return render(request, "23g.html")
+
+
+@login_required
 def equipment_details(request):
-    return  render(request,"equipment_details.html")
+    return render(request, "equipment_details.html")

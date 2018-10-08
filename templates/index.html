@@ -114,82 +114,24 @@
                 <div class="box-head">
                     <p>告警设备</p>
                 </div>
+
                 <div class="task-menu">
+
                     <ul>
+                      {% for k,v in wlog.items %}
                         <li data-toggle="modal" data-target="#ModalCenter">
                             <div class="server">
-                                <p>CQISBG11BHW</p>
-                                <p>10.227.136.230</p>
+                                <p>{{ k }}</p>
+
                             </div>
                         </li>
-                        <li data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQISBG12BHW</p>
-                                <p>10.227.136.233</p>
-                            </div>
-                        </li>
-                        <li data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQISBG13BHW</p>
-                                <p>10.227.136.134</p>
-                            </div>
-                        </li>
-                        <li class="border-r-none" data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQISBG14BHW</p>
-                                <p>10.227.136.137</p>
-                            </div>
-                        </li>
-                        <li data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQPSBG12BHW</p>
-                                <p>10.227.136.236</p>
-                            </div>
-                        </li>
-                        <li data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQPSBG13BHW</p>
-                                <p>10.227.136.239</p>
-                            </div>
-                        </li>
-                        <li data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQPSBG14BHW</p>
-                                <p>10.227.136.198</p>
-                            </div>
-                        </li>
-                        <li class="border-r-none" data-toggle="modal" data-target="#ModalCenter">
-                            <div class="server">
-                                <p>CQPSBG15BHW</p>
-                                <p>10.227.136.140</p>
-                            </div>
-{#                        </li>#}
-{#                        <li data-toggle="modal" data-target="#ModalCenter">#}
-{#                            <div class="server">#}
-{#                                <p>CQEVSMRFP10BHW</p>#}
-{#                                <p>10.227.136.148</p>#}
-{#                            </div>#}
-{#                        </li>#}
-{#                        <li class="border-b-none" data-toggle="modal" data-target="#ModalCenter">#}
-{#                            <div class="server">#}
-{#                                <p>CQEVSMRFP10BHW</p>#}
-{#                                <p>10.227.136.148</p>#}
-{#                            </div>#}
-{#                        </li>#}
-{#                        <li class="border-b-none" data-toggle="modal" data-target="#ModalCenter">#}
-{#                            <div class="server">#}
-{#                                <p>CQEVSMRFP10BHW</p>#}
-{#                                <p>10.227.136.148</p>#}
-{#                            </div>#}
-{#                        </li>#}
-{#                        <li class="border-r-none border-b-none" data-toggle="modal" data-target="#ModalCenter">#}
-{#                            <div class="server">#}
-{#                                <p>CQEVSMRFP10BHW</p>#}
-{#                                <p>10.227.136.148</p>#}
-{#                            </div>#}
-{#                        </li>#}
+
+                       {% endfor %}
+
                     </ul>
+
                 </div>
+
             </div>
 
             <div class="network">
@@ -203,12 +145,13 @@
     </div>
 
     <!-- Modal -->
+  {% for k,v in wlog.items %}
     <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
          aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <span>文字内容框-宽度固定，高度自适应</span>
+                    <span><code>{{ v }}</code></span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
@@ -216,7 +159,7 @@
             </div>
         </div>
     </div>
-
+          {% endfor %}
     <footer>
         <p>重庆移动核心网管理系统 ©2016-2018</p>
     </footer>

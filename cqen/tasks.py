@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 from celery import shared_task
 import datetime
 import paramiko, time
-import getpass,os
+import getpass, os
 import telnetlib
 
 nowTime = datetime.datetime.today().strftime("%Y%m%d")
@@ -23,32 +23,32 @@ def start_ssh_job(cmd):
         res = stdout.read()
         basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         path = (os.path.join(basedir, 'media', i[5]))
-        print(path+'/'+nowTime+'.log')
-        file = open(path+'/'+nowTime+'.log', 'a')
+        print(path + '/' + nowTime + '.log')
+        file = open(path + '/' + nowTime + '.log', 'a')
         file.write(res.decode('utf-8', 'ignore'))
         file.flush()
         file.close()
-        sres=str(res,encoding='utf-8')
+        sres = str(res, encoding='utf-8')
         print(sres)
     except Exception as e:
         print(e)
         client.close()
-    return {'sshresult':sres}
+    return {'sshresult': sres}
 
 
 @shared_task()
-def telnet_task_job(host,port,username,passwd,cmd):
+def telnet_task_job(host, port, username, passwd, cmd):
     try:
-       tn = telnetlib.Telnet(host=host,port=port)
-       tn.set_debuglevel(2)
-       tn.write(username.encode('ascii') + b"\n")
-       tn.write(passwd+'\n')
-       if passwd:
-          tn.write(passwd.encode('ascii') + b"\n")
-          tn.write(cmd+"\n")
-          tn.write(exit+"\n")
-          sres=tn.read_all().decode('utf-8')
-          tn.close()
+        tn = telnetlib.Telnet(host=host, port=port)
+        tn.set_debuglevel(2)
+        tn.write(username.encode('ascii') + b"\n")
+        tn.write(passwd + '\n')
+        if passwd:
+            tn.write(passwd.encode('ascii') + b"\n")
+            tn.write(cmd + "\n")
+            tn.write(exit + "\n")
+            sres = tn.read_all().decode('utf-8')
+            tn.close()
     except Exception as error:
         print(error)
     return {'telnetresult': sres}

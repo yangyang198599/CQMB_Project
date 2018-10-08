@@ -6,12 +6,10 @@ from cqen.models import Tasks
 from celery.result import AsyncResult
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django_celery_results.models import TaskResult
-import datetime,time
+import datetime, time
 from django.db.models.aggregates import Count
 from celery.states import state
 from django.views.decorators.cache import cache_page
-
-
 
 
 @login_required
@@ -22,7 +20,7 @@ def celery_call(request):
             host_info = Tasks.objects.filter(id=id)
             res = []
             for i in host_info:
-                res.append([i.ip, i.port, i.username, i.passwd, i.taskcmd,i.hostname])
+                res.append([i.ip, i.port, i.username, i.passwd, i.taskcmd, i.hostname])
                 tid = tasks.start_ssh_job.delay(res)
 
                 # tid = tasks.start_ssh_job(res)
@@ -32,15 +30,14 @@ def celery_call(request):
     return redirect("/moretask/")
 
 
-
-
-def update_result_hostname(hostname,task_id):
+def update_result_hostname(hostname, task_id):
     time.sleep(1)
     try:
-       TaskResult.objects.filter(task_id=task_id).update(host_name=hostname)
+        TaskResult.objects.filter(task_id=task_id).update(host_name=hostname)
     except Exception as e:
         print(e)
     return
+
 
 # 获取结果
 
@@ -91,14 +88,14 @@ def task_result_list(request):
             return render(request, 'taskhistory.html', {'result': contacts})
     else:
         clist = TaskResult.objects.all().annotate(Count("date_done")).order_by("-date_done")
-        res=[]
+        res = []
         for clist in clist.values():
             id = clist['task_id']
             result = clist['result']
             lis = result.encode('utf-8').decode('unicode_escape')
-            datedone=clist['date_done']
-            status=clist['status']
-            res.append([id,lis,status,datedone])
+            datedone = clist['date_done']
+            status = clist['status']
+            res.append([id, lis, status, datedone])
 
         paginator = Paginator(res, 6)
         page = request.GET.get("page")

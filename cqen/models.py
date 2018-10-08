@@ -3,6 +3,7 @@ from django.db import models
 from django_celery_results.models import TaskResult
 from django.utils import timezone
 
+
 # Create your models here.
 class Account(models.Model):
     id = models.AutoField(primary_key=True)
@@ -48,21 +49,22 @@ class Tasks(models.Model):
 
 class DownloadPath(models.Model):
     id = models.AutoField(primary_key=True)
-    ppath = models.ForeignKey("Floder",to_field='fpath',on_delete=models.CASCADE)
+    ppath = models.ForeignKey("Floder", to_field='fpath', on_delete=models.CASCADE)
     filename = models.CharField(max_length=60, unique=True)
 
 
 class Floder(models.Model):
     id = models.AutoField(primary_key=True)
-    owner = models.ForeignKey('Nethost',to_field='m_hostname',on_delete=models.CASCADE)
+    owner = models.ForeignKey('Nethost', to_field='m_hostname', on_delete=models.CASCADE)
     folderame = models.CharField(max_length=45, null=False, verbose_name='文件名')
-    fpath = models.CharField(max_length=60, default='/home/voip/Projects/CQMB_Project/media/',unique=True )
+    fpath = models.CharField(max_length=60, default='/home/voip/Projects/CQMB_Project/media/', unique=True)
     modifytime = models.TimeField(default=timezone.now)
     filesize = models.CharField(max_length=60, default=0)
 
+
 class Sysinfo(models.Model):
     id = models.AutoField(primary_key=True)
-    osname=models.CharField(max_length=45, null=False, verbose_name='os')
+    osname = models.CharField(max_length=45, null=False, verbose_name='os')
     cpu = models.CharField(max_length=45, null=False, verbose_name='cpu')
-    mem=models.CharField(max_length=45, null=False, verbose_name='mem')
-    hdisk=models.CharField(max_length=45, null=False, verbose_name='hdisk')
+    mem = models.CharField(max_length=45, null=False, verbose_name='mem')
+    hdisk = models.CharField(max_length=45, null=False, verbose_name='hdisk')
