@@ -117,7 +117,7 @@
 	max-width: 750px;
 }
 
-.task-menu ul li {
+.unconfirmed ul li {
 	background: url("../images/triangle-red.jpg") no-repeat right bottom;
 	background-size: 3rem 3.2rem;
 }
