@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cb0d067-2b38-46de-ac53-5819f3d7fc75" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/cqen/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cqen/warining_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/warining_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/CQISBG13BHW/20181010.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/CQISBG13BHW/20181010.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +42,7 @@
       <file leaf-file-name="batchtaskview.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="264">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
@@ -62,8 +60,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cqen/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="179">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -71,11 +69,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="manager.py" pinned="false" current-in-tab="false">
+        <entry file="file:///home/voip/Projects/CQMB_Project/venv/lib/python3.6/site-packages/django/db/models/manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="177" selection-start-line="177" selection-end-line="177" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="warining_device.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cqen/warining_device.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="209">
+              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -88,8 +95,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="141" column="45" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
+            <state relative-caret-position="182">
+              <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -199,10 +206,10 @@
         <option value="$PROJECT_DIR$/CQMB_Project/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
-        <option value="$PROJECT_DIR$/cqen/warining_device.py" />
         <option value="$PROJECT_DIR$/cqen/views.py" />
         <option value="$PROJECT_DIR$/cqen/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/cqen/warining_device.py" />
       </list>
     </option>
   </component>
@@ -215,9 +222,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="290" />
+    <option name="y" value="137" />
     <option name="width" value="1356" />
     <option name="height" value="576" />
   </component>
@@ -454,7 +461,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1006" extended-state="6" />
+    <frame x="1920" y="-2" width="1366" height="770" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
@@ -463,7 +471,7 @@
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.32629108" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.2775974" />
       <window_info anchor="bottom" x="236" y="299" width="1341" height="539" id="Terminal" order="4" type="FLOATING" weight="0.6799531" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.15495208" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.21978852" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="1" />
@@ -471,7 +479,7 @@
       <window_info anchor="right" id="SciView" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.22790202" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.2112676" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.31493506" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -539,13 +547,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/23g_do2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/as_do.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -821,29 +822,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="264">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="141" column="45" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
+        <state relative-caret-position="182">
+          <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///home/voip/Projects/CQMB_Project/venv/lib/python3.6/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cqen/warining_device.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="209">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cqen/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="179">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
