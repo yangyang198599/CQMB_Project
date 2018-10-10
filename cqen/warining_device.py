@@ -26,6 +26,24 @@ def warningdevice():
     print(whost)
     return whost
 
+def deviceischeckd():
+    log=TaskResult.objects.filter(ischecked=True)
+    key=[]
+    values=[]
+    for hinfo in log:
+
+        key.append(hinfo.host_name)
+        values.append(str(hinfo.result).encode('utf-8').decode('unicode_escape'))
+    ischecked=dict(zip(key,values))
+
+    print(ischecked)
+    return ischecked
+
+
+
+
+
+
 
 @login_required
 def waringchecked(request):

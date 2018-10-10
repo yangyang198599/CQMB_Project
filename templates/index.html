@@ -139,10 +139,10 @@
                     <p>已确认设备</p>
                 </div>
                       <div class="task-menu ">
-                    {% for key,v in wlog.items %}
+                    {% for key,v in ischecked.items %}
                         <ul>
 
-                            <li id="show" data-toggle="modal" data-target="#{{ key }}">
+                            <li id="show" data-toggle="modal">
                                 <div class="server">
                                     <p id="key">{{ key }}</p>
 

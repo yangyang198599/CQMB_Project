@@ -6,7 +6,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models.aggregates import Count
 from cqen.models import Nethost, Tasks, Floder
 from cqen.operationlogs import operationlogs
-from cqen.warining_device import warningdevice
+from cqen.warining_device import warningdevice,deviceischeckd
 from datetime import datetime
 from dwebsocket import accept_websocket
 import paramiko
@@ -34,8 +34,9 @@ def login_to_index(request):
 def index(request):
     list = Nethost.objects.values('m_company').distinct().annotate(Count('id'))
 
-    wlog=warningdevice()
-    return render(request, 'index.html', {'list': list,'wlog':wlog})
+    wlog = warningdevice()
+    ischecked = deviceischeckd()
+    return render(request, 'index.html', {'list': list, 'wlog': wlog, 'ischecked': ischecked})
 
 
 def logout_to_login(request):
@@ -140,7 +141,7 @@ def addhost(request):
                                                   m_passwd=m_passwd, m_company=m_company)
                 cnethost.save()
                 logrecode(request, type[0])
-                return redirect('/hostlist',error)
+                return redirect('/hostlist', error)
             except Exception as e:
                 print(e)
                 return redirect('/hostlist')
@@ -303,7 +304,3 @@ def switch23g(request):
 @login_required
 def equipment_details(request):
     return render(request, "equipment_details.html")
-
-
-
-

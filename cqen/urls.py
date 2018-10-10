@@ -29,7 +29,7 @@ urlpatterns = [
     path('Peer/', views.Peer, name='Peer'),
     path('switch23g/', views.switch23g, name='switch23g'),
     path('equipment_details/', views.equipment_details, name='equipment_details'),
-    path('warningdevice/', warining_device.warningdevice, name='warningdevice'),
+    # path('warningdevice/', warining_device.warningdevice, name='warningdevice'),
     path('waringchecked/', warining_device.waringchecked, name='waringchecked'),
 
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
