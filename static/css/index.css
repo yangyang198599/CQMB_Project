@@ -123,7 +123,7 @@
 }
 
 .task-menu ul li .server {
-	padding-left: 5rem;
+	padding-left: 2.5rem;
 	background: url("../images/server.svg") no-repeat left center;
 	background-size: 2rem;
 }

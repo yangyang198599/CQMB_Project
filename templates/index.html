@@ -138,7 +138,22 @@
                 <div class="box-head">
                     <p>已确认设备</p>
                 </div>
+                      <div class="task-menu ">
+                    {% for key,v in wlog.items %}
+                        <ul>
 
+                            <li id="show" data-toggle="modal" data-target="#{{ key }}">
+                                <div class="server">
+                                    <p id="key">{{ key }}</p>
+
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                    {% endfor %}
+                </div>
                 
             </div>
         </div>
