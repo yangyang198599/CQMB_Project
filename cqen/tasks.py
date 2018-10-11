@@ -37,7 +37,7 @@ def start_ssh_job(cmd):
         fsize=str(f,encoding='utf-8')
         ff=fsize[0:4]
         print(ff)
-        Floder.objects.filter(folderame=i[5]).update(filename=filename, fpath='/media/',filesize=ff)
+        Floder.objects.filter(folderame=i[5]).update(filename=filename, fpath='/media/',filesize=ff,modifytime=datetime.datetime.now())
         sres = str(res, encoding='utf-8')
         print(sres)
     except Exception as e:

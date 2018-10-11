@@ -109,8 +109,8 @@
                                     <td><input type="checkbox"></td>
                                     <td class="folderImg"><a
                                             href="{% url 'cqen:sub_file' %}?flodername={{ contact.folderame }}">{{ contact.folderame }}</a></td>
-                                    <td>1.00 MB</td>
-                                    <td>2018/09/05 15:04:35</td>
+                                    <td>{{ contact.filesize }}</td>
+                                    <td>{{ contact.modifytime }}</td>
                                     <td>755</td>
                                     <td>root</td>
                                 </tr>

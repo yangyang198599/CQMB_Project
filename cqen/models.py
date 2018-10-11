@@ -1,9 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django_celery_results.models import TaskResult
-from django.utils import timezone
-
-
+import datetime
 # Create your models here.
 class Account(models.Model):
     id = models.AutoField(primary_key=True)
@@ -59,7 +57,7 @@ class Floder(models.Model):
     folderame = models.CharField(max_length=45, null=False, verbose_name='文件夹名')
     fpath = models.CharField(max_length=60, default='/media/', unique=True)
     filename=models.CharField(max_length=500, null=True, verbose_name='文件名')
-    modifytime = models.TimeField(default=timezone.now)
+    modifytime = models.DateTimeField(default=datetime.datetime.now())
     filesize = models.CharField(max_length=60, default=0)
 
 
