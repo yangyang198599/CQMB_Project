@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb0d067-2b38-46de-ac53-5819f3d7fc75" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CQMB_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CQMB_Project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cqen/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/CQISBG12BHW/20181011.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/CQISBG12BHW/20181011.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssh_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssh_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sub_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sub_file.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +38,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="batchtaskview.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="batchtaskview.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
@@ -56,8 +50,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cqen/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="273" column="18" lean-forward="true" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
+            <state relative-caret-position="455">
+              <caret line="277" column="71" lean-forward="true" selection-start-line="277" selection-start-column="71" selection-end-line="277" selection-end-column="71" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -119,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sub_file.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sub_file.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/sub_file.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="149" column="78" selection-start-line="149" selection-start-column="78" selection-end-line="149" selection-end-column="78" />
+            <state relative-caret-position="221">
+              <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -224,10 +218,10 @@
         <option value="$PROJECT_DIR$/templates/ssh_task.html" />
         <option value="$PROJECT_DIR$/cqen/models.py" />
         <option value="$PROJECT_DIR$/cqen/tasks.py" />
-        <option value="$PROJECT_DIR$/cqen/batchtaskview.py" />
         <option value="$PROJECT_DIR$/cqen/views.py" />
         <option value="$PROJECT_DIR$/CQMB_Project/settings.py" />
         <option value="$PROJECT_DIR$/templates/sub_file.html" />
+        <option value="$PROJECT_DIR$/cqen/batchtaskview.py" />
       </list>
     </option>
   </component>
@@ -479,7 +473,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1006" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" x="0" y="385" width="1920" height="296" id="Event Log" order="1" side_tool="true" type="WINDOWED" weight="0.32925472" />
@@ -487,8 +480,8 @@
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.15845071" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.30854607" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.15023474" />
-      <window_info anchor="bottom" x="487" y="281" width="1341" height="539" id="Terminal" order="4" type="FLOATING" weight="0.6799531" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.12992546" />
+      <window_info active="true" anchor="bottom" x="487" y="28" width="1341" height="792" id="Terminal" order="4" type="FLOATING" visible="true" weight="0.6799531" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4991119" visible="true" weight="0.12992546" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32955223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="1" />
@@ -812,33 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#24#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cqen/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="273" column="18" lean-forward="true" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssh_task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -873,10 +839,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="277" column="71" lean-forward="true" selection-start-line="277" selection-start-column="71" selection-end-line="277" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sub_file.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="149" column="78" selection-start-line="149" selection-start-column="78" selection-end-line="149" selection-end-column="78" />
+        <state relative-caret-position="221">
+          <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#24#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqen/batchtaskview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
