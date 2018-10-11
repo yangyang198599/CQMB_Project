@@ -11,3 +11,12 @@ def file_download(request):
     response['Content-Type'] = 'application/octet-stream'
     response['Content-Disposition'] = 'attachment;filename="example.tar.gz"'
     return response
+
+@login_required
+
+def subfile(request):
+
+
+    pass
+
+
