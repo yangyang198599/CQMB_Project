@@ -98,3 +98,903 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
 172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
 192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
 192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1090286  bytes 257436836 (257.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2225199  bytes 227223978 (227.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 503198  bytes 119838241 (119.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 503198  bytes 119838241 (119.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2923  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2903  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1098650  bytes 261505437 (261.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229627  bytes 227892140 (227.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 523226  bytes 127809530 (127.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 523226  bytes 127809530 (127.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1098848  bytes 261522122 (261.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229659  bytes 227894741 (227.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 524624  bytes 128243005 (128.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 524624  bytes 128243005 (128.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    20100  0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1099137  bytes 261561454 (261.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229681  bytes 227896151 (227.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 526304  bytes 128845976 (128.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 526304  bytes 128845976 (128.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    20100  0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1099576  bytes 261638018 (261.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229711  bytes 227898646 (227.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 527775  bytes 129414011 (129.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 527775  bytes 129414011 (129.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1099644  bytes 261643931 (261.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229730  bytes 227900399 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 528669  bytes 129744448 (129.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 528669  bytes 129744448 (129.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1099769  bytes 261673332 (261.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229741  bytes 227901542 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 529482  bytes 130058028 (130.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 529482  bytes 130058028 (130.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1100309  bytes 261749440 (261.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229768  bytes 227903321 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 530692  bytes 130577751 (130.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 530692  bytes 130577751 (130.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1100341  bytes 261758161 (261.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229777  bytes 227904326 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 530835  bytes 130726079 (130.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 530835  bytes 130726079 (130.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1100434  bytes 261766855 (261.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229785  bytes 227905209 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 531378  bytes 131018224 (131.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 531378  bytes 131018224 (131.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1101523  bytes 261911826 (261.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229850  bytes 227911080 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 533541  bytes 131635462 (131.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 533541  bytes 131635462 (131.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1102139  bytes 262034911 (262.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2229890  bytes 227914270 (227.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 535829  bytes 132470413 (132.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 535829  bytes 132470413 (132.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1125413  bytes 285786868 (285.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2246463  bytes 230277013 (230.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 541689  bytes 133738117 (133.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 541689  bytes 133738117 (133.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1127216  bytes 286981111 (286.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2247846  bytes 230509398 (230.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 543284  bytes 134226298 (134.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 543284  bytes 134226298 (134.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1127407  bytes 287014127 (287.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2247908  bytes 230513730 (230.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 544305  bytes 134618447 (134.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 544305  bytes 134618447 (134.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1127588  bytes 287047423 (287.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2247961  bytes 230517659 (230.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 545569  bytes 135110194 (135.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 545569  bytes 135110194 (135.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1127721  bytes 287060181 (287.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2248027  bytes 230522802 (230.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 546664  bytes 135534679 (135.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 546664  bytes 135534679 (135.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.146  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::36cb:d133:5016:c770  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:b8:71:10  txqueuelen 1000  (以太网)
+        RX packets 1127842  bytes 287085027 (287.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2248037  bytes 230523743 (230.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (本地环回)
+        RX packets 547855  bytes 136085969 (136.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 547855  bytes 136085969 (136.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.53.1  netmask 255.255.255.0  broadcast 172.16.53.255
+        inet6 fe80::250:56ff:fec0:1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:01  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2927  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vmnet8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.59.1  netmask 255.255.255.0  broadcast 192.168.59.255
+        inet6 fe80::250:56ff:fec0:8  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:c0:00:08  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2907  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 3c:95:09:9e:b6:11  txqueuelen 1000  (以太网)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+172.16.53.0     0.0.0.0         255.255.255.0   U     0      0        0 vmnet1
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.59.0    0.0.0.0         255.255.255.0   U     0      0        0 vmnet8

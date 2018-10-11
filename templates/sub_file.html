@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -115,6 +116,10 @@
             }
         }
 
+
+
+
+
     </script>
     <div class="main">
         <div class="breadcrumbNav">
@@ -139,30 +144,16 @@
                         </thead>
 
                         <tbody>
+                        {% for f in finfo  %}
                         <tr>
                             <td><input  name="ids" type="checkbox"></td>
-                            <td class="subfname"><a href="http://192.168.0.146/media/yangyang/20180910.log">20180910.log</a></td>
-                            <td>10.00 KB</td>
-                            <td>2018/09/05 15:04:35</td>
+                            <td class="subfname"><a  href="http://{{ request.get_host }}{{ f.0 }}{{ f.1 }}/{{ f.2 }}"> {{ f.2 }} </a></td>
+                            <td>{{ f.4 }}</td>
+                            <td>{{ f.3 }}</td>
                             <td>755</td>
                             <td>root</td>
                         </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td class="subfname">二级文件名</td>
-                            <td>10.00 KB</td>
-                            <td>2018/09/05 15:04:35</td>
-                            <td>755</td>
-                            <td>root</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td class="subfname">二级文件名</td>
-                            <td>10.00 KB</td>
-                            <td>2018/09/05 15:04:35</td>
-                            <td>755</td>
-                            <td>root</td>
-                        </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>

@@ -268,8 +268,15 @@ def sub_file(request):
     hostname=request.GET.get('flodername')
     f=Floder.objects.filter(folderame=hostname)
     finfo=[]
+    filename=''
+    filepath=''
+    flodername=''
     for foo in  f:
-        finfo.append([foo.folderame,foo.filename])
+        filename=foo.filename
+        filepath=foo.fpath
+        flodername=foo.folderame
+        finfo.append([filepath,flodername,filename,foo.modifytime,foo.filesize])
+    print(finfo)
     return render(request, "sub_file.html",{'finfo':finfo})
 
 
