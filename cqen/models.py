@@ -56,8 +56,9 @@ class DownloadPath(models.Model):
 class Floder(models.Model):
     id = models.AutoField(primary_key=True)
     owner = models.ForeignKey('Nethost', to_field='m_hostname', on_delete=models.CASCADE)
-    folderame = models.CharField(max_length=45, null=False, verbose_name='文件名')
+    folderame = models.CharField(max_length=45, null=False, verbose_name='文件夹名')
     fpath = models.CharField(max_length=60, default='/home/voip/Projects/CQMB_Project/media/', unique=True)
+    filename=models.CharField(max_length=500, null=True, verbose_name='文件名')
     modifytime = models.TimeField(default=timezone.now)
     filesize = models.CharField(max_length=60, default=0)
 

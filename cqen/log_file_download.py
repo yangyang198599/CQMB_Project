@@ -12,11 +12,6 @@ def file_download(request):
     response['Content-Disposition'] = 'attachment;filename="example.tar.gz"'
     return response
 
-@login_required
 
-def subfile(request):
-
-
-    pass
 
 

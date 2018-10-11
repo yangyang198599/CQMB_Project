@@ -15,7 +15,7 @@
     <script src="/static/js/util.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/css/sb-admin-2.css" >
+    <link rel="stylesheet" href="/static/css/sb-admin-2.css">
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/util.css">
@@ -23,176 +23,179 @@
 </head>
 
 <body>
-  <div class="container-fluid container-box">
+<div class="container-fluid container-box">
     <!-- Navigation -->
     <!-- /.navbar-header -->
     <div class="navbar-default sidebar" role="navigation">
-      <div class="sidebar-nav navbar-collapse">
-      <div class="sidebar-brand">
-          <a href="#">重庆移动<br>核心网管理系统</a>
-      </div>
-        <ul class="nav sidebar-menu" id="side-menu">
-          <li class="sidebar-dropdown menuHome">
-            <a href="{% url 'cqen:index' %}">首页</a>
-          </li>
-          <li class="sidebar-dropdown menuHost">
-            <a href="{% url 'cqen:hostlist' %}">主机列表</a>
-          </li>
-          <li class="sidebar-dropdown menuSSH">
-            <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
-          </li>
-          <li class="sidebar-dropdown menuTask">
-            <a href="{% url 'cqen:moretask' %}">批量任务</a>
-          </li>
-          <li class="sidebar-dropdown menuResult">
-            <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
-          </li>
-          <li class="sidebar-dropdown fileMgmt active">
-            <a href="{% url 'cqen:filemgmt' %}">文件管理</a>
-          </li>
-          <li class="sidebar-dropdown menuLog">
-            <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
-          </li>
-           <li class="sidebar-dropdown isolation">
-            <a href="#">隔离管理<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-              <li>
-                <a href="{% url 'cqen:isolation' %}">设备隔离</a>
-              </li>
-              <li>
-                <a href="{% url 'cqen:Peer' %}">对端AS隔离</a>
-              </li>
-              <li>
-                <a href="{% url 'cqen:switch23g' %}">切换2G/3G</a>
-              </li>
+        <div class="sidebar-nav navbar-collapse">
+            <div class="sidebar-brand">
+                <a href="#">重庆移动<br>核心网管理系统</a>
+            </div>
+            <ul class="nav sidebar-menu" id="side-menu">
+                <li class="sidebar-dropdown menuHome">
+                    <a href="{% url 'cqen:index' %}">首页</a>
+                </li>
+                <li class="sidebar-dropdown menuHost">
+                    <a href="{% url 'cqen:hostlist' %}">主机列表</a>
+                </li>
+                <li class="sidebar-dropdown menuSSH">
+                    <a href="{% url 'cqen:ssh_task' %}">WebSSH</a>
+                </li>
+                <li class="sidebar-dropdown menuTask">
+                    <a href="{% url 'cqen:moretask' %}">批量任务</a>
+                </li>
+                <li class="sidebar-dropdown menuResult">
+                    <a href="{% url 'cqen:task_result_list' %}">任务结果</a>
+                </li>
+                <li class="sidebar-dropdown fileMgmt active">
+                    <a href="{% url 'cqen:filemgmt' %}">文件管理</a>
+                </li>
+                <li class="sidebar-dropdown menuLog">
+                    <a href="{% url 'cqen:opreationlog' %}">系统日志</a>
+                </li>
+                <li class="sidebar-dropdown isolation">
+                    <a href="#">隔离管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="{% url 'cqen:isolation' %}">设备隔离</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cqen:Peer' %}">对端AS隔离</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cqen:switch23g' %}">切换2G/3G</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
             </ul>
-            <!-- /.nav-second-level -->
-          </li>
-        </ul>
-      </div>
-      <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.sidebar-collapse -->
     </div>
 
     <form id="callfr" method="post" action="{% url 'cqen:mkdir' %}">
-      {% csrf_token %}
-      <div class="main">
-        <div class="breadcrumbNav">
-          <ol class="breadcrumb">
-              <!--
-             <li class="breadcrumb-item"><a href="../welcome.do">首页</a></li>
-           -->
-            <li class="breadcrumb-item active breadcrumb-file">文件管理</li>
-          </ol>
+        {% csrf_token %}
+        <div class="main">
+            <div class="breadcrumbNav">
+                <ol class="breadcrumb">
+                    <!--
+                   <li class="breadcrumb-item"><a href="../welcome.do">首页</a></li>
+                 -->
+                    <li class="breadcrumb-item active breadcrumb-file">文件管理</li>
+                </ol>
+            </div>
+
+            <div class="folder-list">
+                <div class="general-btn">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addFolder">新建文件夹
+                    </button>
+                    <span for="foldername" class="text-warning">{{ error }}</span>
+                </div>
+                <div class="table-lists">
+                    <div class="fixed-table-container">
+                        <table id="bootstrap-table" class="table table1 table-hover">
+                            <thead>
+                            <th data-field="state" data-checkbox="true"><input type="checkbox" id="selectAll"></th>
+                            <th data-field="foldername" data-sortable="true">文件名</th>
+                            <th data-field="size" data-sortable="true">大小</th>
+                            <th data-field="time" data-sortable="true">修改时间</th>
+                            <th data-field="permission" data-sortable="true">权限</th>
+                            <th data-field="author" data-sortable="true">所有者</th>
+                            </thead>
+                            {% for contact in floderlist.object_list %}
+
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td class="folderImg"><a
+                                            href="{% url 'cqen:sub_file' %}?flodername={{ contact.folderame }}">{{ contact.folderame }}</a></td>
+                                    <td>1.00 MB</td>
+                                    <td>2018/09/05 15:04:35</td>
+                                    <td>755</td>
+                                    <td>root</td>
+                                </tr>
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="nodata" style="display: none;">暂无数据</div>
+                </div>
+
+                <!-- 分页 -->
+                <div class="pg-box">
+                    <div class="pageMain">
+                        <p>页数：<span>1/10</span></p>
+                        <p>总数：<span>91</span></p>
+                    </div>
+                    <div class="tablePaginate">
+                        <ul class="pagination">
+                            <li class="paginate-outline paginate-disabled">首页</li>
+                            <li class="paginate-outline paginate-disabled">上一页</li>
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>...</li>
+                            <li>10</li>
+                            <li class="paginate-outline">下一页</li>
+                            <li class="paginate-outline">尾页</li>
+                        </ul>
+                    </div>
+                </div><!-- 分页 -->
+            </div>
         </div>
 
-        <div class="folder-list">
-          <div class="general-btn">
-            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addFolder">新建文件夹
-            </button>
-              <span for="foldername" class="text-warning">{{ error }}</span>
-          </div>
-          <div class="table-lists">
-            <div class="fixed-table-container">
-              <table id="bootstrap-table" class="table table1 table-hover">
-                <thead>
-                <th data-field="state" data-checkbox="true"><input type="checkbox" id="selectAll"></th>
-                <th data-field="foldername" data-sortable="true">文件名</th>
-                <th data-field="size" data-sortable="true">大小</th>
-                <th data-field="time" data-sortable="true">修改时间</th>
-                <th data-field="permission" data-sortable="true">权限</th>
-                <th data-field="author" data-sortable="true">所有者</th>
-                </thead>
-                   {% for contact in floderlist.object_list %}
+        <!-- Modal -->
+        <div class="modal fade" id="addFolder" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="ModalLongTitle">新建文件夹</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="foldername">文件夹名</label>
 
-                <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td id="{{contact.folderame}}" class="folderImg"><a href="{% url 'cqen:sub_file' %}">{{contact.folderame}}</a></td>
-                    <td>100.00 MB</td>
-                    <td>2018/09/05 15:04:35</td>
-                    <td>755</td>
-                    <td>root</td>
-                </tr>
-                </tbody>
-                {% endfor %}
-              </table>
+                            <input type="text" class="form-control" id="foldername" name="foldername"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-primary" data-dismiss="modal" onclick="btcall()" value="确定">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
             </div>
-            <div class="nodata" style="display: none;">暂无数据</div>
-          </div>
-
-          <!-- 分页 -->
-          <div class="pg-box">
-            <div class="pageMain">
-              <p>页数：<span>1/10</span></p>
-              <p>总数：<span>91</span></p>
-            </div>
-            <div class="tablePaginate">
-              <ul class="pagination">
-                <li class="paginate-outline paginate-disabled">首页</li>
-                <li class="paginate-outline paginate-disabled">上一页</li>
-                <li class="active">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>...</li>
-                <li>10</li>
-                <li class="paginate-outline">下一页</li>
-                <li class="paginate-outline">尾页</li>
-              </ul>
-            </div>
-          </div><!-- 分页 -->
         </div>
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="addFolder" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="ModalLongTitle">新建文件夹</h4>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="foldername">文件夹名</label>
-
-                <input type="text" class="form-control" id="foldername" name="foldername" required="required" >
-              </div>
-            </div>
-            <div class="modal-footer">
-              <input type="button" class="btn btn-primary" data-dismiss="modal" onclick="btcall()" value="确定">
-              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">取消</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </form>
 
     <footer>
-      <p>重庆移动核心网管理系统 ©2016-2018</p>
+        <p>重庆移动核心网管理系统 ©2016-2018</p>
     </footer>
-  </div>
-  <script type="text/javascript">
+</div>
+<script type="text/javascript">
 
-        function check() {
-            var fname = $("#foldername").val();
+    function check() {
+        var fname = $("#foldername").val();
 
-            if (fname =='') {
-                alert("请输入文件夹名称");
+        if (fname == '') {
+            alert("请输入文件夹名称");
 
-                return false;
-            }
-
-            return true;
-
+            return false;
         }
 
+        return true;
 
-        function btcall() {
-            if (check(true)) {
-                $("#callfr").action = "{% url 'cqen:mkdir' %}";
-                $("#callfr").submit();
-            }
+    }
+
+
+    function btcall() {
+        if (check(true)) {
+            $("#callfr").action = "{% url 'cqen:mkdir' %}";
+            $("#callfr").submit();
         }
+    }
 
-    </script>
+</script>
 </body>
 </html>

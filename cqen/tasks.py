@@ -5,7 +5,7 @@ import datetime
 import paramiko, time
 import getpass, os
 import telnetlib
-
+from cqen.models import Nethost, Tasks, Floder
 nowTime = datetime.datetime.today().strftime("%Y%m%d")
 
 
@@ -24,6 +24,8 @@ def start_ssh_job(cmd):
         basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         path = (os.path.join(basedir, 'media', i[5]))
         print(path + '/' + nowTime + '.log')
+        filename=(path + '/' + nowTime + '.log')
+        Floder.objects.filter(folderame=i[5]).update(filename=filename)
         file = open(path + '/' + nowTime + '.log', 'a')
         file.write(res.decode('utf-8', 'ignore'))
         file.flush()

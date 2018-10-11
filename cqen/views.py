@@ -265,7 +265,12 @@ def filemgmt(request):
 
 @login_required
 def sub_file(request):
-    return render(request, "sub_file.html")
+    hostname=request.GET.get('flodername')
+    f=Floder.objects.filter(folderame=hostname)
+    finfo=[]
+    for foo in  f:
+        finfo.append([foo.folderame,foo.filename])
+    return render(request, "sub_file.html",{'finfo':finfo})
 
 
 @login_required
