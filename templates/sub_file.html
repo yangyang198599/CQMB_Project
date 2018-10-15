@@ -125,7 +125,9 @@
         <div class="breadcrumbNav">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active breadcrumb-file"><a href="{% url 'cqen:filemgmt' %}">文件管理</a></li>
-                <li class="breadcrumb-item">YYD</li>
+                 {% for n in finfo%}
+                <li class="breadcrumb-item">{{ n.1 }}</li>
+                {% endfor %}
             </ol>
         </div>
 
