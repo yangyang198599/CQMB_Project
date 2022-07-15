@@ -8,7 +8,7 @@ cffi==1.11.5
 cryptography==2.3.1
 Django==2.1.2
 django-celery==3.2.2
-django-celery-results==1.0.1
+django-celery-results==2.4.0
 dwebsocket==0.4.2
 idna==2.7
 kombu==4.2.1
